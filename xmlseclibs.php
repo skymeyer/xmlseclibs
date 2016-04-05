@@ -40,6 +40,10 @@
  * @version   2.0.1
  */
 
+if (!function_exists('random_bytes')) {
+    die('xmlseclibs requires https://github.com/paragonie/random_compat for PHP <7.0');
+}
+
 $xmlseclibs_srcdir = dirname(__FILE__) . '/src/';
 require $xmlseclibs_srcdir . '/XMLSecurityKey.php';
 require $xmlseclibs_srcdir . '/XMLSecurityDSig.php';
